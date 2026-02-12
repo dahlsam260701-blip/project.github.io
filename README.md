@@ -16,13 +16,3 @@
 - styles.css — стили
 - img/sneakers.png — изображение
 
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WKQVH1B7LC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-WKQVH1B7LC');
-</script>
