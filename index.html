@@ -48,7 +48,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     Только оригинальные кроссовки • Прямые поставки • Честные скидки от 10%
                 </p>
 
-                <a href="https://t.me/myownavatar" class="btn" target="_blank">
+                <a href="https://t.me/myownavatar" class="btn" id="buyBtn" target="_blank">
                     Купить
                 </a>
             </div>
@@ -59,6 +59,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         </div>
     </section>
-
+<script>
+document.getElementById('buyBtn').addEventListener('click', function() {
+    fbq('track', 'Lead');
+});
+</script>
 </body>
 </html>
