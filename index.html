@@ -60,8 +60,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </section>
 <script>
-document.getElementById('buyBtn').addEventListener('click', function() {
-    fbq('track', 'Lead');
+document.getElementById('buyBtn').addEventListener('click', function(e) {
+
+    e.preventDefault(); // останавливаем мгновенный переход
+
+    fbq('track', 'Lead'); // отправляем событие
+
+    // даем пикселю время отправиться
+    setTimeout(() => {
+        window.open(this.href, '_blank');
+    }, 300);
+
 });
 </script>
 </body>
