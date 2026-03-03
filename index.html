@@ -112,14 +112,16 @@ document.getElementById('buyBtn').addEventListener('click', function(e) {
     z-index: 9999;
   }
 </style>
+<div class="side-banner-left" id="leftAd"></div>
 
-<div class="side-banner-left">
-  <script
-    src="https://storage.dsp-ui.uz/uploads/banner-loader.js"
-    adunit-id="test_banner"
-    width="300"
-    height="250">
-  </script>
-</div>
+<script>
+  var s = document.createElement("script");
+  s.src = "https://storage.dsp-ui.uz/uploads/banner-loader.js";
+  s.setAttribute("adunit-id", "test_banner");
+  s.setAttribute("width", "300");
+  s.setAttribute("height", "250");
+  document.getElementById("leftAd").appendChild(s);
+</script>
+
 </body>
 </html>
