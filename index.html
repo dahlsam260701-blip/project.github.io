@@ -74,14 +74,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 document.getElementById('buyBtn').addEventListener('click', function(e) {
 
-    e.preventDefault(); // останавливаем мгновенный переход
+    e.preventDefault();
 
-    fbq('track', 'Lead'); // отправляем событие
+    // Meta Pixel
+    fbq('track', 'Lead');
 
-    // даем пикселю время отправиться
+    // Google Analytics 4
+    if (typeof gtag === 'function') {
+        gtag('event', 'buy_click', {
+            event_category: 'button',
+            event_label: 'telegram'
+        });
+    }
+
     setTimeout(() => {
         window.open(this.href, '_blank');
-    }, 300);
+    }, 500);
 
 });
 </script>
